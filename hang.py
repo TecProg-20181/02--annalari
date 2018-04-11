@@ -1,7 +1,7 @@
 import random
 import string
 
-WORDLIST_FILENAME = "palavras.txt"
+WORDLIST_FILENAME = "words.txt"
 
 def openFile(fileName):
     return open(fileName, 'r', 0)
@@ -120,8 +120,6 @@ inFile = openFile(WORDLIST_FILENAME)
 line = readLine(inFile)
 wordlist = createList(line)
 secretWord = chooseWord(wordlist).lower()
-
-
 
 header(wordlist, secretWord)
 hangman(secretWord)
